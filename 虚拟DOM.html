@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        规模较小 虚拟DOM快 规模较大 真实DOM快
+        虚拟 DOM 到底是什么，说简单点，就是一个普通的 JavaScript 对象，包含了 tag、props、children 三个属性
+        Vue里： 当组件更新后，触发虚拟DOM的数据变化，然后通过虚拟DOM和真实DOM对比，再对真实DOM更新，也就是模拟DOM的JS数据结构（diff判断需要更新的区域）
+        const vNode = {
+            tag:"div",//标签名
+            data:{
+                class:"red",//标签名上的属性
+            }
+            on:{
+                click:()=>{}//事件
+            }
+        }，
+        children:[//子元素们
+        {tag:"span",...}]
+        优点：减少DOM操作，虚拟DOM可以将多次操作合并为一次操作、跨平台
+
+     -->
+     <div id="app">
+        <p class="text">hello world!!!</p>
+      </div>
+      转化为DOM
+      <!-- {
+        tag: 'div',
+        props: {
+          id: 'app'
+        },
+        chidren: [
+          {
+            tag: 'p',
+            props: {
+              className: 'text'
+            },
+            chidren: [
+              'hello world!!!'
+            ]
+          }
+        ]
+      } -->
+    Vue 创建虚拟DOM(只能再render函数里得到h)
+    h('div',{
+        class:'red',
+        on:{
+            click:()=>{}
+        },
+
+    },[h('span',{},'span1'),h('span',{},'span2')]) 
+</body>
+</html>

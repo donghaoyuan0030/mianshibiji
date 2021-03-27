@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定位 */
+        /* 父元素要有宽高 */
+        /* 绝对定位+margin auto */
+        /* .box1 {
+            width: 200px;
+            height: 200px;
+            background: green;
+            position: relative;
+
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            top: 0%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+
+        } */
+
+        /* 绝对定位+translate */
+        /* 
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: green;
+            position: relative;
+
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            top: 50%;    
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+        } */
+
+        /* display felx */
+        /*  */
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background: red;
+
+        }
+
+
+
+        /* display:table-cell */
+        /* .box1{ */
+        /* background: blue;
+            width: 300px;
+            height: 300px; */
+        /* 设置了table-cell的元素对高度和宽度高度敏感，对margin值无反应，可以响应padding的设置，表现几乎类似一个td元素。 */
+        /* display: table-cell;
+            vertical-align: middle;
+            margin-top: 100px;
+            overflow: hidden;
+                 */
+
+
+        /* .box{
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin-top: 150px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- 定位
+    display:flex; -->
+    <div class="box1">
+        <div class="box"></div>
+
+    </div>
+
+
+
+</body>
+
+</html>

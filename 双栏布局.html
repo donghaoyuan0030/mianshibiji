@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container {
+            height: auto;
+            overflow: hidden;
+        }
+
+        .right {
+            width: 180px;
+            float: right;
+            background: #aafed6;
+        }
+
+        .left {
+            float: none;
+            background: #e8f6fe;
+
+            width: auto;
+            overflow: hidden;
+        } */
+
+        .container{
+            display: flex;
+            width: 800px;
+            justify-content: space-between;
+            height: 100px;
+        }
+        .right{
+            background: red;
+            
+        }
+        .left{
+            flex: 1;
+            background: blue;
+            min-width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="right">
+            right content fixed width
+        </div>
+        <div class="left">
+            left content flexible width
+        </div>
+    </div>
+</body>
+
+</html>

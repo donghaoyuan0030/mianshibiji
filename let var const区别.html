@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    let 和 var 的区别：
+    1、let 不允许重复声明变量
+    2、let 不存在变量提升
+    3、let 存在一个块级作用域的概念,以{}为标识，一对{}就是一个语句块，就会产生一个块级作用域
+    4、暂时性死区：let声明变量在当前作用域不允许同名的变量进来
+    let a =1;
+    function a(){
+        log(a)// not definde
+    }
+
+    var const 的区别：
+    1、const 也不存在变量提升
+    2、const 也不允许重复声明
+    const 声明常量的
+    3、const声明的变量赋值以后，不允许再修改该变量的值（引用数据类型不能改地址）
+    object.freeze
+   
+</body>
+<script>
+    const a ={
+        name:'lisi'
+    }
+    function x(){
+        a.name = 'zhaosi'
+    }
+    x()
+    console.log(a);
+</script>
+</html>
